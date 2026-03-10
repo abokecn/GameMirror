@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <path d="M116 336C116 255.366 181.366 190 262 190H398C398 270.634 332.634 336 252 336H116Z" fill="url(#wave)"/>
+  <path d="M160 154C177.673 126.472 208.635 108 244 108C298.124 108 342 151.876 342 206C342 208.029 341.938 210.044 341.816 212.044H206C180.595 212.044 157.606 221.642 140.431 237.403C133.845 227.329 130 215.285 130 202.344C130 183.965 137.734 167.389 150.128 155.695L160 154Z" fill="url(#cloud)"/>
+  <path d="M255 172L329 150L308 228L382 206L241 385L270 273L203 289L255 172Z" fill="#F8FBFF"/>
+  <path d="M104 354H344" stroke="rgba(255,255,255,0.18)" stroke-width="12" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="52" x2="436" y2="446" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="116" y1="190" x2="398" y2="336" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="146" y1="110" x2="332" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#BFDBFE"/>
+    </linearGradient>
+  </defs>
+</svg>
