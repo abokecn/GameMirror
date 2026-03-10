@@ -1,268 +1,33 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="GameMirror 是一个面向中国大陆用户的游戏镜像与访问入口站点，统一收录可访问的游戏官网、镜像地址与使用说明。" />
-  <meta name="theme-color" content="#0b1220" />
-  <title>GameMirror | 游戏镜像与访问入口</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <title>GameMirror</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="./" aria-label="GameMirror 首页">
-        <img src="assets/logo.svg" alt="GameMirror Logo" class="brand-logo" />
-        <div class="brand-text">
-          <strong>GameMirror</strong>
-          <span>Play beyond borders</span>
-        </div>
-      </a>
-
-      <nav class="nav-links" aria-label="主导航">
-        <a href="#games">游戏入口</a>
-        <a href="#how">使用说明</a>
-        <a href="#config">维护方式</a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-      </nav>
-
-      <button class="nav-toggle" id="navToggle" aria-label="切换导航" aria-expanded="false">☰</button>
-    </div>
+  <header class="header">
+    <a class="brand" href="/">
+      <img src="assets/logo.svg" alt="GameMirror" />
+      <span>GameMirror</span>
+    </a>
   </header>
 
-  <main>
+  <main class="main">
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">GameMirror.org</span>
-          <h1>一个为游戏镜像、反代接入与长期维护而设计的统一入口站</h1>
-          <p class="hero-desc">
-            为中国大陆用户提供更稳定的游戏官网访问入口、镜像导航与接入说明。
-            首期计划接入 <strong>KARDS</strong>，后续可通过统一配置文件持续扩展更多游戏站点。
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#games">查看当前入口</a>
-            <a class="btn btn-secondary" href="#config">查看维护结构</a>
-          </div>
-
-          <ul class="hero-meta">
-            <li>Cloudflare Pages 部署</li>
-            <li>GitHub 仓库维护</li>
-            <li>gamesweb.conf 统一配置</li>
-          </ul>
-        </div>
-
-        <div class="hero-panel">
-          <div class="status-card glass">
-            <div class="status-head">
-              <span class="dot"></span>
-              <span>接入状态</span>
-            </div>
-            <div class="status-body">
-              <div class="status-item">
-                <span>站点名称</span>
-                <strong>GameMirror</strong>
-              </div>
-              <div class="status-item">
-                <span>当前首发游戏</span>
-                <strong>KARDS</strong>
-              </div>
-              <div class="status-item">
-                <span>部署平台</span>
-                <strong>Cloudflare Pages</strong>
-              </div>
-              <div class="status-item">
-                <span>维护模式</span>
-                <strong>配置驱动</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="mini-console">
-            <div class="console-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <pre><code># gamesweb.conf
-[[games]]
-name = "KARDS"
-slug = "kards"
-status = "online"
-upstream = "https://www.kards.com/"
-route = "/games/kards/"
-region = "CN Friendly Entry"
-notes = "首期接入项目"</code></pre>
-          </div>
-        </div>
-      </div>
+      <h1>GameMirror</h1>
+      <p>Game access, mirrored.</p>
     </section>
 
-    <section class="section" id="games">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Games</span>
-            <h2>当前可接入游戏</h2>
-          </div>
-          <p>主页可直接展示项目卡片；后续新增游戏时，仅需追加配置与资源描述。</p>
-        </div>
-
-        <div class="games-grid">
-          <article class="game-card featured">
-            <div class="game-top">
-              <span class="badge">首发项目</span>
-              <span class="game-status online">Online</span>
-            </div>
-            <h3>KARDS</h3>
-            <p>
-              二战题材卡牌游戏。主页可作为镜像入口、说明页、公告页或跳转页，
-              帮助中国大陆用户快速定位可访问地址。
-            </p>
-            <ul class="game-tags">
-              <li>镜像入口</li>
-              <li>访问说明</li>
-              <li>公告预留</li>
-            </ul>
-            <div class="game-actions">
-              <a class="btn btn-primary" href="/games/kards/">进入入口页</a>
-              <a class="btn btn-secondary" href="#how">查看说明</a>
-            </div>
-          </article>
-
-          <article class="game-card placeholder">
-            <div class="game-top">
-              <span class="badge badge-soft">预留</span>
-              <span class="game-status pending">Pending</span>
-            </div>
-            <h3>Next Game</h3>
-            <p>为后续接入的新游戏预留。可从配置文件自动生成卡片，也可手动维护精选展示位。</p>
-            <ul class="game-tags">
-              <li>可扩展</li>
-              <li>可配置</li>
-              <li>长期维护</li>
-            </ul>
-          </article>
-
-          <article class="game-card placeholder">
-            <div class="game-top">
-              <span class="badge badge-soft">预留</span>
-              <span class="game-status pending">Pending</span>
-            </div>
-            <h3>资源站 / 下载页</h3>
-            <p>可扩展为游戏介绍、客户端下载、更新日志、FAQ、公告与备用网址集合页。</p>
-            <ul class="game-tags">
-              <li>下载镜像</li>
-              <li>更新日志</li>
-              <li>FAQ</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="how">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Guide</span>
-            <h2>这个主页适合做什么</h2>
-          </div>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>统一入口</h3>
-            <p>将所有游戏镜像、访问页、公告页和备用网址统一收纳，避免后续扩展时结构混乱。</p>
-          </article>
-          <article class="feature-card">
-            <h3>配置驱动</h3>
-            <p>通过 <code>gamesweb.conf</code> 维护站点数据，前端只负责展示，长期维护成本更低。</p>
-          </article>
-          <article class="feature-card">
-            <h3>适合 GitHub</h3>
-            <p>纯静态结构清晰，便于通过 GitHub 编辑、审查变更、回滚版本，并直接接入 Pages 部署。</p>
-          </article>
-          <article class="feature-card">
-            <h3>可继续升级</h3>
-            <p>后续可加入 JSON 数据源、自动生成游戏卡片、搜索、筛选、状态灯与公告系统。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="config">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Architecture</span>
-            <h2>推荐维护结构</h2>
-          </div>
-        </div>
-
-        <div class="arch-grid">
-          <div class="arch-card">
-            <h3>目录建议</h3>
-            <pre><code>/
-├─ index.html
-├─ styles.css
-├─ app.js
-├─ gamesweb.conf
-├─ assets/
-│  ├─ logo.svg
-│  └─ favicon.svg
-└─ games/
-   └─ kards/
-      └─ index.html</code></pre>
-          </div>
-
-          <div class="arch-card">
-            <h3>gamesweb.conf 示例</h3>
-            <pre><code>site_name = "GameMirror"
-base_url = "https://gamemirror.org"
-
-[[games]]
-name = "KARDS"
-slug = "kards"
-status = "online"
-path = "/games/kards/"
-target = "https://www.kards.com/"
-type = "reverse-proxy"
-description = "KARDS 大陆访问入口"
-
-[[games]]
-name = "Example"
-slug = "example"
-status = "planned"
-path = "/games/example/"
-target = ""
-type = "resource-hub"
-description = "未来扩展示例"</code></pre>
-          </div>
-        </div>
-
-        <p class="note">
-          说明：Cloudflare Pages 本身更适合静态站点；若要做真正的动态反代逻辑，通常还需要结合
-          Cloudflare Workers / Functions。当前这套主页结构先把“品牌首页 + 目录结构 + 长期维护框架”搭好。
-        </p>
-      </div>
-    </section>
+    <section class="games" id="gamesList"></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <strong>GameMirror</strong>
-        <p>GameMirror.org · 游戏镜像与访问入口</p>
-      </div>
-      <div class="footer-links">
-        <a href="#games">游戏入口</a>
-        <a href="#config">维护结构</a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <span>© GameMirror</span>
   </footer>
 
+  <script src="games-data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
